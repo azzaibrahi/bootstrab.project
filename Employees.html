@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+
+    <style>
+        .brandGradient {
+            background: #3C94CF;
+            background: linear-gradient(to right, #3C94CF 0%, #29CF34 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;}
+            .modal-dialog{
+                width: 300rem;
+            }
+            
+            .addd{
+                width: 600px;
+               
+            }
+            
+            
+    </style>
+
+</head>
+
+<body>
+
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark py-3 ">
+            <div class="container-fluid">
+                <a class="navbar-brand  brandGradient" href="#">EMS2.0</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="dash.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " href="Employees.html">Employees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Jobs.html">Jobs</a>
+                        </li>
+
+
+                    </ul>
+                    <div>
+                        <form class="d-flex gap-3" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control " placeholder="Search for..."
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-success " type="button" id="button-addon2"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg></button>
+                            </div>
+                            <div class="vr text-light "></div>
+                            <button class="btn btn-warning " type="button" id="button-addon2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-power" viewBox="0 0 16 16">
+                                    <path d="M7.5 1v7h1V1h-1z" />
+                                    <path
+                                        d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                                </svg></button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <body class="bg-light">
+            <div class="container-fluid mt-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-2">
+                        <ul class="list-group shadow ">
+                            <li class="list-group-item active py-3" aria-current="true">Employee data</li>
+                            <a  class="list-group-item list-group-item-action py-3"data-bs-toggle="modal"
+                            data-bs-target="#AddEmployee" >Add Employee</a>
+                        </ul><!-- add employee modal-->
+                        
+                        <!--end employee modal-->
+                        <div class="list-group mt-3 shadow">
+                            <li class="list-group-item active py-3" aria-current="true">Related Links</li>
+
+
+                            <a href="Jobs.html" class="list-group-item list-group-item-action py-3">Jobs List</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header text-bg-dark text-center py-3">
+                                Employees List
+                            </div>
+                        </div>
+                        <table class="table table-bordered border-light-subtle shadow-sm">
+                            <thead>
+                                <tr class="table-secondary ">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Employee ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email ID</th>
+                                    <th>Details</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>741</td>
+                                    <td>John Doe</td>
+                                    <td>johnedoe@gmail.com</td>
+                                    <td>
+                                        <a class="btn btn-primary d-block" data-bs-toggle=modal
+                                            data-bs-target="#details">Details</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-warning d-block" data-bs-toggle="modal"
+                                        data-bs-target="#EditEmployee">Edit</a>
+                                    </td>
+                                     <!-- edit-->
+                                     <div class="modal fade " id="EditEmployee" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px);" data-bs-backdrop="static">
+                                     <div class="modal-dialog modal-dialog-centered">
+                                         <div class="modal-content addd">
+                                           
+                                        
+                                       
+                                             
+                                             <div class= "modal-header text-bg-dark ">
+                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+                                                 
+                                                 <button type="button" class="btn-close btn-close-white"  data-bs-dismiss="modal"
+                                                     aria-label="Close"></button>
+                                             </div>
+                                             <div class="modal-body addd px-4 py-3">
+                                         <form  >
+                                            <div class="row">
+                                            <div class="col-md-12">
+                                               <input type="date" class="form-control" value="2009-12-09">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mt-3">
+                                                <input type="text" class="form-control" value="Johne">
+                                                
+                                                
+                                            </div>
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <div class="mt-3">
+                                                <input type="text" class="form-control d-lg-inline-block" value="Doe">
+                                                
+                                            </div>
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <div class="mt-3">
+                                                <input type="email" class="form-control d-lg-inline-block" value="johnedoe@gmail.com">
+                                                
+                                            </div>
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <div class="mt-3">
+                                                <input type="number" class="form-control d-lg-inline-block" value="7418529632">
+                                                
+                                            </div>
+                                            </div>
+                                            <div class="col-md-12 mt-3">
+                                                <select class="form-select">
+                                                   
+                                                    <option  disabled selected value="-1"> Select job for employee</option>
+                                                    <option  selected value="1">Graphic Designer </option>
+                                                    <option value="2">Web Designer</option>
+                                                    <option value="3">Web Developer</option>
+                                                    <option value="4">Digital Marketer</option>
+                                                    </select>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-10 d-flex mt-3 mb-2">
+                                                <button type="button " class="btn btn-success flex-fill ">Update Employee</button>
+                                            </div>
+                                    <div class="col-md-2 d-flex g-1 mb-2 mt-3">
+                                        <button type="button" class="btn btn-warning  flex-fill " data-bs-dismiss="modal">Discard</button>
+                                     </div>
+
+
+
+
+
+
+
+
+                                        </div> 
+                                        
+                                         </form>
+                                         
+                                                
+                                         </div>
+                                     </div>
+                                     </div>
+                                    <td>
+                                        <a  class="btn btn-danger d-block"data-bs-toggle=modal
+                                        data-bs-target="#Deletmodal">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>741</td>
+                                    <td>John Doe</td>
+                                    <td>johnedoe@gmail.com</td>
+                                    <td>
+                                        <a class="btn btn-primary d-block " data-bs-toggle=modal
+                                            data-bs-target="#details">Details</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-warning d-block" data-bs-toggle="modal"
+                                        data-bs-target="#EditEmployee">Edit</a>
+                                    </td>
+
+                                    <td>
+                                        <a class="btn btn-danger d-block" data-bs-toggle=modal
+                                        data-bs-target="#Deletmodal" >Delete</a>
+                                        <!--Delet modal-->
+
+                                       
+
+                                        <div class="modal fade" id="Deletmodal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px);" data-bs-backdrop="static">
+                                        <div class="modal-dialog modal-dialog-centered px-md-0">
+                                            <div class="modal-content  ">
+                                                
+                                                <div class="modal-header fs-4  ">
+                                                    <label class="fw-lighter " >Do you want to delete <b> "John Doe"</b>?</label>
+                                                    
+                                                    <button type="button" class="btn-close fs-5 "  data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                               
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">YES!</button>
+                                                    <button type="button" class="btn btn-warning">Nope,Go back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                               
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>741</td>
+                                    <td>John Doe</td>
+                                    <td>johnedoe@gmail.com</td>
+                                    <td>
+                                        <a class="btn btn-primary d-block" data-bs-toggle=modal
+                                            data-bs-target="#details">Details</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-warning d-block " data-bs-toggle="modal"
+                                             data-bs-toggle="modal"
+                                            data-bs-target="#EditEmployee">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger d-block" data-bs-toggle="modal"
+                                        data-bs-target="#Deletmodal">Delete</a>
+                                        
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+
+
+                        </table>
+
+                             <!--add employee-->
+
+                        <div class="modal fade " id="AddEmployee" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px);" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content addd ">
+                                
+                                <div class="modal-header text-bg-dark fs-5 ">Add Employee Details</h1>
+                                    
+                                    <button type="button" class="btn-close btn-close-white"  data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body px-4 addd py-3">
+                            <form  >
+                               <div class="row">
+                               <div class="col-md-12">
+                                  <input type="date" class="form-control">
+                               </div>
+                               <div class="col-md-6">
+                                   <div class="mt-3">
+                                   <input type="text" class="form-control" placeholder="First Name" >
+                                   
+                                   
+                               </div>
+                               </div>
+                               <div class="col-md-6 ">
+                                   <div class="mt-3">
+                                   <input type="text" class="form-control d-lg-inline-block"  placeholder="Last Name">
+                                   
+                               </div>
+                               </div>
+                               <div class="col-md-6 ">
+                                   <div class="mt-3">
+                                   <input type="email" class="form-control d-lg-inline-block"  placeholder="Email ID">
+                                   
+                               </div>
+                               </div>
+                               <div class="col-md-6 ">
+                                   <div class="mt-3">
+                                   <input type="number" class="form-control d-lg-inline-block" placeholder="Phone Number" >
+                                   
+                               </div>
+                               </div>
+                               <div class="col-md-12 mt-3">
+                                   <select class="form-select">
+                                      
+                                       <option  disabled selected value="-1"> Select job for employee</option>
+                                       <option   value="1">Graphic Designer </option>
+                                       <option value="2">Web Designer</option>
+                                       <option value="3">Web Developer</option>
+                                       <option value="4">Digital Marketer</option>
+                                       </select>
+                                   </select>
+                               </div>
+                               
+                                 <div class="col-md-10 d-flex mt-3 mb-2">
+                                       <button type="button " class="btn btn-success flex-fill ">Add Employee</button>
+                                   </div>
+                                 <div class="col-md-2 d-flex g-1 mb-2 mt-3">
+                                     <button type="button" class="btn btn-warning  flex-fill " data-bs-dismiss="modal">Close</button>
+                               </div>
+                          
+                           </div>
+                        
+
+
+
+
+
+
+
+                           </div> 
+                           
+                            </form>
+                            
+                                   
+                            </div>
+                        </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!--  Details modal-->
+            <div class="modal fade" id="details" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="backdrop-filter: blur(5px);" data-bs-backdrop="static">
+                <div class="modal-dialog det  modal-dialog-centered " >
+                  <div class="modal-content p-0  ">
+                    <div class="modal-header text-bg-dark">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Employee Details</h1>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 m-0 ">
+                      <table class="table table-bordered h-100">
+                        <tbody class="collapse-horizontal p-0 m-0">
+                            <tr><th class="border-bottom-0 w-50 custom" >ID</th >
+                                <td class="border-bottom-0 custom">1</td> </tr><tr><th>Employee ID</th> <td>7418</td></tr><tr><th>First Name</th>
+                                <td>John</td></tr>
+                                <tr><th>Last Name</th>
+                                <td>Doe</td></tr>
+                                <tr><th>Email ID</th>
+                                    <td>johndoe@gmail.com</td> </tr><tr><th>Phone Number</th> <td>741852963</td></tr><tr><th>Job</th>
+                                    <td>Graphic Designer</td></tr>
+                                    <tr><th>Joining  Date </th>
+                                    <td>22nd July,2023</td></tr>
+                            
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal-footer border-top-0">
+                      <a   class="btn btn-warning" data-bs-dismiss="modal" data-bs-target="#EditEmployee" data-bs-toggle="modal">Edit Details</a>
+                      <button type="button" class="btn btn-primary">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+           
+        </body>
+    </body>
+
+</html>
